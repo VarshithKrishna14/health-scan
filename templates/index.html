@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HealthScan AI</title>
+</head>
+<body>
+    <h2>Upload a Medical Scan</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h3>Result: {{ result }}</h3>
+        <img src="{{ image_path }}" width="300px">
+    {% endif %}
+</body>
+</html>
