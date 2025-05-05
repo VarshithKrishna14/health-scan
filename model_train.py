@@ -4,6 +4,8 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 # Define CNN Model
+
+#test
 def create_model():
     model = Sequential([
         Conv2D(32, (3,3), activation='relu', input_shape=(128, 128, 1)),
@@ -26,7 +28,7 @@ train_generator = train_datagen.flow_from_directory(
     batch_size=16,
     color_mode="grayscale",
     class_mode='binary',
-    subset='training'
+    # subset='training'
 )
 val_generator = train_datagen.flow_from_directory(
     'dataset/',
@@ -34,7 +36,7 @@ val_generator = train_datagen.flow_from_directory(
     batch_size=16,
     color_mode="grayscale",
     class_mode='binary',
-    subset='validation'
+    # subset='validation'
 )
 
 # Train model
